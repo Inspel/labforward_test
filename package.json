@@ -3,12 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
+    "chart.js": "^3.7.1",
+    "classnames": "^2.3.1",
+    "lodash.merge": "^4.6.2",
+    "lodash.range": "^3.2.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^18.0.0",
+    "react-redux": "^7.2.8"
   },
   "devDependencies": {
+    "@types/lodash.merge": "^4.6.6",
+    "@types/lodash.range": "^3.2.6",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "@types/react-redux": "^7.1.23",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "eslint": "^7.32.0",
@@ -16,6 +26,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "parcel": "^2.4.1",
+    "parcel-transformer-ts-css-modules": "^1.0.14",
     "prettier": "^2.6.1",
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
