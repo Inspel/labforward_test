@@ -15,11 +15,11 @@ import {
 import range from 'lodash.range';
 import cn from 'classnames';
 import merge from 'lodash.merge';
-import { Signal } from '../../types';
 
-import * as styles from './index.module.css';
-import { CHART_X_SIZE } from '../../reducers/dataSlice/dataSlice';
-import { DEFAULT_CHART_OPTIONS } from '../../constants';
+import { Signal } from '~src/types';
+import { CHART_X_SIZE, DEFAULT_CHART_OPTIONS } from '~src/constants';
+
+import * as styles from './SignalsChart.module.css';
 
 ChartJS.register(
   CategoryScale,
@@ -39,19 +39,19 @@ const defaultDataset: Partial<ChartDataset<'line', Signal[]>> = {
 const chartOptions: ChartOptions<'line'> = {
   plugins: {
     title: {
-      text: 'Signal',
+      text: 'Areas of interest',
     },
   },
   scales: {
     y: {
-      max: 1,
+      max: 2,
       min: 0,
     },
   },
 };
 
 type Props = {
-  className: string;
+  className?: string;
   dataset: ChartDataset<'line', Signal[]>;
 };
 
@@ -64,7 +64,7 @@ export const SignalsDataChart: FC<Props> = ({ dataset, className }) => {
     <div className={cn(styles.container, className)}>
       <Line
         data={{
-          labels: range(CHART_X_SIZE),
+          labels: range(1, CHART_X_SIZE + 1),
           datasets: [{ ...defaultDataset, ...dataset }],
         }}
         options={currentOptions}

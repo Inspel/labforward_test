@@ -18,6 +18,9 @@ module.exports = {
     'prettier/prettier': 'warn',
   },
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],

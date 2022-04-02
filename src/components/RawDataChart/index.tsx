@@ -14,11 +14,11 @@ import {
 import range from 'lodash.range';
 import merge from 'lodash.merge';
 import cn from 'classnames';
-import { RawDataItem } from '../../types';
 
-import * as styles from './index.module.css';
-import { CHART_X_SIZE } from '../../reducers/dataSlice/dataSlice';
-import { DEFAULT_CHART_OPTIONS } from '../../constants';
+import { RawDataItem } from '~src/types';
+import { CHART_X_SIZE, DEFAULT_CHART_OPTIONS } from '~src/constants';
+
+import * as styles from './RawDataChart.module.css';
 
 ChartJS.register(
   CategoryScale,
@@ -44,7 +44,7 @@ const chartOptions: ChartOptions<'line'> = {
 };
 
 type Props = {
-  className: string;
+  className?: string;
   dataset: ChartDataset<'line', RawDataItem[]>;
 };
 
@@ -57,7 +57,7 @@ export const RawDataChart: FC<Props> = ({ dataset, className }) => {
     <div className={cn(styles.container, className)}>
       <Line
         data={{
-          labels: range(CHART_X_SIZE),
+          labels: range(1, CHART_X_SIZE + 1),
           datasets: [{ ...dataset }],
         }}
         options={currentOptions}
