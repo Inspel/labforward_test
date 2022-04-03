@@ -1,5 +1,5 @@
 {
-  "name": "labforward_test",
+  "name": "some_company_test",
   "version": "1.0.0",
   "description": "",
   "dependencies": {
@@ -29,6 +29,7 @@
     "parcel": "^2.4.1",
     "parcel-transformer-ts-css-modules": "^1.0.14",
     "prettier": "^2.6.1",
+    "process": "^0.11.10",
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
     "typescript": "^4.6.3"
@@ -40,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Inspel/labforward_test.git"
+    "url": "git+https://github.com/Inspel/some_company_test.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Inspel/labforward_test/issues"
+    "url": "https://github.com/Inspel/some_company_test/issues"
   },
-  "homepage": "https://github.com/Inspel/labforward_test#readme"
+  "homepage": "https://github.com/Inspel/some_company_test#readme"
 }
